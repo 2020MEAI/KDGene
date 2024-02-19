@@ -86,7 +86,7 @@ For the Disease Gene Prediction (DGP) baselines:
 
 - GLIM_DG (RWR_PPI/RWR_HMLN): https://github.com/Svvord/GLIM
 
-For the Knowledge Graph Embedding (KGE) baselines used in our study, we have systematically organized and made them available in the GitHub repository:" in the GitHub repository:
+For the Knowledge Graph Embedding (KGE) baselines used in our study, we have systematically organized and made them available in the GitHub repository:
 
 - Knowledge Graph Embedding (KGE): https://github.com/sienna-wxy/KG_Completion
 
