@@ -62,7 +62,7 @@ class Dataset(object):
                 self.gene_in_train[kk][k] = sorted(list(v))
 
         print("* {} triples in train".format(len(self.data['train'])))
-        # [disease-symptom, gene-gene(-900/950/850), GO-gene, pathway-gene, disease-drug, chemical-protein, demo]
+        # [disease-symptom, protein-protein(-900/950/850), GO-protein, pathway-protein, disease-drug, chemical-protein, demo]
         base_kg = ['disease-symptom']
         for kg in base_kg:
             examples = []

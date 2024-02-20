@@ -44,6 +44,8 @@ python learn.py --edim 1000 --rdim 1000 --batch_size 512 --learning_rate 0.1 --r
 
 Adjust these parameters based on your dataset and the computational resources available to you.
 
+#### demo 
+
 Additionally, we provide a demo version of the dataset for debugging purposes. This demo consists of ultra-small training and testing sets, along with a reduced version of the knowledge graph. To use this demo dataset, set the `fold` parameter to `"demo"` and update the `base_kg` in `datasets.py` at line 66 to `['demo']`. Then, execute `learn.py` to run the demonstration. Please note, this dataset is intended solely for demonstration purposes and should not be used for result evaluation.
 
 ### Dataset
@@ -86,7 +88,7 @@ For the Disease Gene Prediction (DGP) baselines:
 
 - GLIM_DG (RWR_PPI/RWR_HMLN): https://github.com/Svvord/GLIM
 
-For the Knowledge Graph Embedding (KGE) baselines used in our study, we have systematically organized and made them available in the GitHub repository:" in the GitHub repository:
+For the Knowledge Graph Embedding (KGE) baselines used in our study, we have systematically organized and made them available in the GitHub repository:
 
 - Knowledge Graph Embedding (KGE): https://github.com/sienna-wxy/KG_Completion
 
