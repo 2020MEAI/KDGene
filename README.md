@@ -88,6 +88,12 @@ For the Disease Gene Prediction (DGP) baselines:
 
 - GLIM_DG (RWR_PPI/RWR_HMLN): https://github.com/Svvord/GLIM
 
+#### Citing
+
+If you find KDGene useful for your research, please consider citing the following paper:
+
+Wang X, Yang K, Jia T, Gu F, Wang C, Xu K, Shu Z, Xia J, Zhu Q, Zhou X. KDGene: knowledge graph completion for disease gene prediction using interactional tensor decomposition. Brief Bioinform. 2024 Mar 27;25(3):bbae161.
+
 For the Knowledge Graph Embedding (KGE) baselines used in our study, we have systematically organized and made them available in the GitHub repository:
 
 - Knowledge Graph Embedding (KGE): https://github.com/sienna-wxy/KG_Completion
