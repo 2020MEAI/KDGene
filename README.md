@@ -3,6 +3,7 @@
 
 ![KDGeneFramework](KDGeneFramework.png)
 
+
 We integrate multiple relations centered on diseases and genes from biological knowledge bases to construct a large-scale biological KG, and develop an end-to-end knowledge graph completion model using an interactional tensor decomposition to identify disease-gene associations, named KDGene. 
 
 KDGene introduces a gating mechanism-based interaction module between the embeddings of entities and relations to tensor decomposition, which can effectively enhance the information interaction in biological knowledge. Perceiving related knowledge, the model is capable of learning the connotation of different relations and endows biological entities and relations with more comprehensive and precise representations, which is beneficial to disease gene prediction. 
@@ -47,6 +48,30 @@ Adjust these parameters based on your dataset and the computational resources av
 #### demo 
 
 Additionally, we provide a demo version of the dataset for debugging purposes. This demo consists of ultra-small training and testing sets, along with a reduced version of the knowledge graph. To use this demo dataset, set the `fold` parameter to `"demo"` and update the `base_kg` in `datasets.py` at line 66 to `['demo']`. Then, execute `learn.py` to run the demonstration. Please note, this dataset is intended solely for demonstration purposes and should not be used for result evaluation.
+
+#### Evaluation Process
+
+We provide the prediction results of KDGene on the first two folds of the DisGeNet dataset (`eval_fold1.txt` and `eval_fold2.txt`) to facilitate reproducibility and result validation. These files are included in the repository.
+
+To evaluate the results, we also provide the script `Evaluation.py`. This script is designed to calculate multiple evaluation metrics, including:
+
+- **Hit Ratio (HR@k)**: HR@1, HR@3, HR@10, HR@50
+- **Mean Average Precision (MAP@k)**: MAP@1, MAP@3, MAP@10, MAP@50
+
+To run the evaluation:
+
+1. Open the file `Evaluation.py`.
+2. Modify the `_evaluation_main` function according to your local directory structure and file locations.
+3. Run the script with Python to obtain the evaluation results.
+
+The current script is configured to work directly with the two provided evaluation files, and the average performance across the two folds is as follows:
+
+| Metric  | HR@1   | HR@3   | HR@10  | HR@50  | MAP@1  | MAP@3  | MAP@10 | MAP@50 |
+| ------- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
+| **avg** | 0.1264 | 0.2452 | 0.4152 | 0.6166 | 0.4076 | 0.3666 | 0.3626 | 0.3719 |
+| **std** | 0.0034 | 0.0027 | 0.0021 | 0.0026 | 0.0091 | 0.0063 | 0.0068 | 0.0065 |
+
+This evaluation framework ensures standardized reporting of prediction performance and can be easily adapted to other folds or datasets.
 
 ### Dataset
 
